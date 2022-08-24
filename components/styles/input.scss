@@ -1,0 +1,103 @@
+@import "style";
+@import "iconfont";
+
+// 默认样式下css
+.bn-input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #dcdfe6f6;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: all .2s ease;
+  position: relative;
+  box-sizing: border-box;
+
+  input {
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    color: $text;
+
+    &:focus {
+      border-color: $primary;
+    }
+
+    input::placeholder {
+      color: $placeholder;
+      font-size: 14px;
+    }
+  }
+}
+
+// 可清除下css
+.bn-input-clearable {
+  input {
+    padding: 8px 30px 10px 10px;
+  }
+
+  .clearable-icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #94969b;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+}
+
+// 不可编辑下css
+.bn-input-disabled {
+  input {
+    padding: 8px 30px 10px 10px;
+    color: $disabled;
+    cursor: no-drop;
+  }
+}
+
+//带右图标的css
+.bn-input-right-icon {
+  input {
+    padding: 8px 30px 10px 10px;
+  }
+
+  .right-icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #94969b;
+  }
+}
+
+//密码框css
+.bn-input-password {
+  input {
+    padding: 8px 30px 10px 10px;
+  }
+
+  .password-icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #94969b;
+  }
+}
+
+// 过渡效果css
+.slide-fade-enter-active {
+  transition: all .2s ease-out;
+}
+
+.slide-fade-enter-from {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
