@@ -3,7 +3,7 @@ layout: home
 hero:
   name: BeansUI
   text: 一套轻量级UI组件库
-  tagline: 完美支持vue3...
+  tagline: 支持vue3...
   image:
     src: /beans.png
     alt: BeansUI
@@ -13,7 +13,7 @@ hero:
       link: /guide/installation
     - theme: alt
       text: 支持
-      link: https://github.com/Mamba243/BeansUI
+      link: https://github.com/Mamba243/beans-ui
       
       
 features:

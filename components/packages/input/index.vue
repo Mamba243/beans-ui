@@ -7,7 +7,7 @@
     </transition>
     <i :class="['password-icon', 'iconfont',inptype=='text'?'bn-icon-browse':'bn-icon-eye-close']" v-if="showPassword"
        @click="showPwd(type)"></i>
-    <i :class="['right-icon', 'iconfont',rightIcon ]" v-if="rightIcon!=''"></i>
+    <i :class="['right-icon', 'iconfont',icon ]" v-if="icon!=''"></i>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ const props = defineProps({
     type: String,
     default: 'text'
   },
-  rightIcon: {
+  icon: {
     type: String,
     default: ''
   }
@@ -44,7 +44,7 @@ const isClass = computed(() => {
     'bn-input',
     props.disabled ? 'bn-input-disabled' : '',
     props.clearable ? 'bn-input-clearable' : '',
-    props.rightIcon ? 'bn-input-right-icon' : '',
+    props.icon ? 'bn-input-right-icon' : '',
     props.showPassword ? 'bn-input-password' : '',
   ]
 })
@@ -64,10 +64,10 @@ const clear = (e) => {
 }
 
 const showPwd = (e) => {
-  if (inptype.value == 'password') {
-    inptype.value = 'text'
-  } else {
+  if (inptype.value == 'text') {
     inptype.value = 'password'
+  } else {
+    inptype.value = 'text'
   }
 }
 </script>

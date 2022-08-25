@@ -59,10 +59,6 @@ button 按钮的基本使用
 ## 自定义颜色
 自定义颜色的按钮类型——通过设置 type 为 `custom` 和 `customColor` 属性设置实现。 
 
-::: tip
-需要注意的是 type 为 default、dashed、text 类型的按钮不支持自定义
-:::
-
 ::: demo 通过设置 type 为 `custom` 和 `customColor` 属性设置实现。
 ```vue
     <template>

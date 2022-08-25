@@ -1,8 +1,8 @@
 <template>
   <div :class="isClass">
     <textarea :cols="cols" :rows="rows" :value="modelValue" :readonly="readonly" :maxlength="maxlength"
-              :placeholder="placeholder" @input="input" @focus="focus" @blur="blur" :style="bnStyle"></textarea>
-    <div class="max-length-inline">
+              :placeholder="placeholder" @input="input" @focus="focus" @blur="blur" :style="bnStyle" :disabled="disabled"></textarea>
+    <div class="max-length-inline" v-if="maxlength">
       {{ n }}/{{ maxlength }}
     </div>
   </div>
@@ -40,7 +40,7 @@ const props = defineProps({
   },
   focusColor: {
     type: String,
-    default: "#0e80eb"
+    default: " #0e80eb"
   }
 })
 
@@ -63,6 +63,7 @@ const focus = (e) => {
 
 const blur = (e) => {
   emit('blur', e)
+  bnStyle.value['border-color'] =''
 }
 
 const isClass = computed(() => {
@@ -72,12 +73,13 @@ const isClass = computed(() => {
   ]
 })
 
-const bnStyle = computed(() => {
-  return {
-    'resize': props.resize ? 'auto' : 'none',
-    'border-color': ''
-  }
-})
+// const bnStyle = computed(() => {
+//   return {
+//     'resize': props.resize ? 'auto' : 'none',
+//     'border-color': '',
+//   }
+// })
+const bnStyle = ref({'resize':props.resize?'auto':'none','border-color':''})
 </script>
 
 <style lang="scss" scoped>

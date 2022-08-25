@@ -9,11 +9,11 @@ export default {}
   <bn-input v-model='val' placeholder="asd" rightIcon='bn-icon-add' disabled/>
   <bn-input v-model='val' placeholder="asd" showPassword type="password"/>
 
-  <bn-textArea :rows="10" :cols="30" :maxlength="10" :resize="true" v-model="val" :focusColor='yellow'></bn-textArea>
+  <bn-textArea :rows="10" :cols="30" :maxlength="10" :resize="true" v-model="val" focusColor="#ec3437" ></bn-textArea>
   <bn-table :showHeader="true" :options="options" size="default"></bn-table>
 </template>
 
-}
+}=
 <script setup>
 import {ref} from "vue"
 
