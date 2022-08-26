@@ -1,0 +1,62 @@
+@import "style";
+@import "iconfont";
+
+.bn-message {
+  position: fixed;
+  left: 50%;
+  width: 380px;
+  height: 40px;
+  line-height: 40px;
+  z-index: 3999;
+  margin-left: -190px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid;
+
+  span {
+    i{
+      margin-right: 5px;
+    }
+    vertical-align: middle;
+    font-size: 14px;
+  }
+
+  &.success {
+    border-color:  rgba(66,184,131,0.5);
+    background-color:#f5fbf9;
+    color: #155f3e;
+  }
+
+  &.warning {
+    border-color:  rgba(245,123,41,0.5);
+    background-color:#fef8f4;
+    color: #f57b29;
+  }
+
+  &.error {
+    border-color:  rgba(237,60,80,0.5);
+    background-color: #fef5f6;
+    color: #ab2131;
+  }
+
+  &.info {
+    border-color: rgba(60,60,60,0.12) ;
+    background-color: #f9f9f9;
+    color: #3c3c3cb3;
+  }
+}
+
+.bn-message-fade-enter-from,
+.bn-message-fade-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.bn-message-fade-enter-active {
+  transition: all .3s ease-in;
+}
+
+.bn-message-fade-leave-active {
+  transition: all .3s ease-out;
+}

@@ -9,19 +9,35 @@ export default {}
   <bn-input v-model='val' placeholder="asd" rightIcon='bn-icon-add' disabled/>
   <bn-input v-model='val' placeholder="asd" showPassword type="password"/>
 
-  <bn-textArea :rows="10" :cols="30" :maxlength="10" :resize="true" v-model="val" focusColor="#ec3437" ></bn-textArea>
+  <bn-textArea :rows="10" :cols="30" :maxlength="10" :resize="true" v-model="val" focusColor="#ec3437"></bn-textArea>
   <bn-table :showHeader="true" :options="options" size="default"></bn-table>
+  <bn-button
+      @click="
+    Message({
+      type:'error',
+      message:'This is a SUCCESS test',
+      icon:'bn-icon-add',
+    })
+"
+  >SHOW SUCCESS
+  </bn-button>
+  <bn-button round  @click="open">sss</bn-button>
+
+
 </template>
 
 }=
 <script setup>
-import {ref} from "vue"
-
-focus = (e) => {
+import {ref,getCurrentInstance,reactive} from "vue"
+const instance = getCurrentInstance();
+const focus = (e) => {
   console.log(e.target.value)
 }
-import {reactive} from "vue";
 
+const open = ()=>{
+  instance.proxy.$message({ message: "默认消息提示！" });
+}
+const val = ref("");
 const state = reactive({
   options: {
     fileds: [
@@ -40,7 +56,7 @@ const state = reactive({
   },
 });
 const {options} = state;
-const val = ref("");
+
 </script>
 
 <style scoped>

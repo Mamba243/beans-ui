@@ -63,8 +63,8 @@ const styles = computed(() => {
     props.customColor == ""
         ? {}
         : props.type == "default"
-        ? {}
-        : bnBtnDeaultStyle,
+            ? {}
+            : bnBtnDeaultStyle,
   ];
 });
 

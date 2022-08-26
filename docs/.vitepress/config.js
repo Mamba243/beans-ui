@@ -76,6 +76,10 @@ export default {
         {
           text: "交互",
           items: [
+            {
+              text: "Message消息提示",
+              link: "/examples/message/",
+            },
           ]
         },
       ],
