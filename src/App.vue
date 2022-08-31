@@ -22,13 +22,14 @@ export default {}
   >SHOW SUCCESS
   </bn-button>
   <bn-button round  @click="open">sss</bn-button>
+  <bn-upload label="上传文件" bn-type="error" target-type="box" drop show-file-list></bn-upload>
 
 
 </template>
 
-}=
 <script setup>
 import {ref,getCurrentInstance,reactive} from "vue"
+import BnUpload from "../components/packages/upload/index.vue";
 const instance = getCurrentInstance();
 const focus = (e) => {
   console.log(e.target.value)

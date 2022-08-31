@@ -1,7 +1,7 @@
 {
   "name": "beans-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.3.0",
   "main": "./dist/beans-ui.umd.cjs",
   "module": "./dist/beans-ui.js",
   "exports": {
